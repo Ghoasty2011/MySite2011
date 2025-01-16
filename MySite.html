@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to Mcone Group's MySite. We create, innovate, and help others with their projects.">
+    <meta name="author" content="Mcone Group">
+    <title>MySite - Mcone Group</title>
+    <style>
+        /* General Styles */
+        body {
+            background-color: #31969f;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            box-sizing: border-box;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #0a3d42;
+            padding: 15px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        nav .menu {
+            display: flex;
+            gap: 15px;
+        }
+
+        nav .menu a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 8px 12px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+            border-radius: 4px;
+        }
+
+        nav .menu a:hover {
+            color: #57b8b5;
+            background-color: #1d5c5e;
+        }
+
+        /* Hamburger Menu */
+        nav .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 4px;
+            cursor: pointer;
+        }
+
+        nav .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: #fff;
+        }
+
+        nav .menu.mobile {
+            display: none;
+            flex-direction: column;
+            background-color: #0a3d42;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            padding: 10px 0;
+            gap: 10px;
+        }
+
+        nav .menu.mobile a {
+            padding: 10px 20px;
+            text-align: left;
+        }
+
+        nav .menu.mobile.show {
+            display: flex;
+        }
+
+        /* Header Styles */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: #0a3d42;
+        }
+
+        header h1 {
+            color: #fff;
+            background-color: #3b8a8c;
+            padding: 20px;
+            border-radius: 12px;
+            font-size: 2.5rem;
+            margin: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        section h2 {
+            color: #fff;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul li {
+            background-color: #2a5d5f;
+            border-radius: 6px;
+            margin: 10px auto;
+            padding: 15px;
+            font-size: 1.1rem;
+            line-height: 1.5;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        ul li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 30px;
+            background-color: #57b8b5;
+            border-radius: 6px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #4d9b98;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0a3d42;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer a {
+            color: #57b8b5;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            nav .hamburger {
+                display: flex;
+            }
+
+            nav .menu {
+                display: none;
+            }
+
+            nav .menu.mobile {
+                display: flex;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 20px;
+            }
+
+            ul li {
+                font-size: 1rem;
+            }
+
+            a {
+                padding: 10px 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="menu mobile">
+            <a href="#goals">Our Goals</a>
+            <a href="#services">Services</a>
+            <a href="#discord">Discord</a>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Mcone Group's MySite</h1>
+    </header>
+
+    <!-- Goals Section -->
+    <section id="goals">
+        <h2>Our Goals</h2>
+        <ul>
+            <li>Create new programs, ideas, and games, and continuously upgrade them!</li>
+            <li>Assist others with their projects and programs!</li>
+            <li>Establish a full 24-hour team working on innovation!</li>
+            <li>Set a new world record for collaborative tech projects!</li>
+        </ul>
+    </section>
+    <section>
+        <h2>The PL (programing languages) that we use</h2>
+        <ul>
+            <li>Python</li>
+            <li>HTML (it is consederd as a PL to us)</li>
+            <li>Scratch</li>
+            <li>Lua (Roblox Studio)</li>
+        </ul>
+    </section>
+    <section>
+        <h2>Members</h2>
+        <ul>
+            <li>Adam Jaber -CEO- </li>
+            <li>Qusai Adoan -Learner-</li>
+            <li>Karam Adoan -Learner-</li>
+        </ul>
+        <h3>How to Join</h3>
+        <ul>
+            <li>Email me by using<a href='adamgammer2011@gmail.com'>adamgammer2011@gmail.com</a></li>
+            <li>Join our Discord server: <a href='https://discord.gg/wDhjetTr'>Mcone's Server</a></li>
+        </ul>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <h3><a href="OurServices.html">Check out our services!</a></h3>
+    </section>
+
+    <!-- Discord Section -->
+    <section id="discord">
+        <h2>Join Our Discord Server:</h2>
+        <h3><a href="https://discord.gg/wDhjetTr" target="_blank">Mcone Server</a></h3>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Mcone Group. All Rights Reserved. <a href="#">Privacy Policy</a></p>
+    </footer>
+
+    <script>
+        // Toggle mobile menu
+        function toggleMenu() {
+            const menu = document.querySelector('.menu.mobile');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+
+</html>
